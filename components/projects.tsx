@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
+import Link from "next/link";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
@@ -15,7 +16,9 @@ export default function Projects() {
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <Link target="_blank" href={project.link}>
+              <Project {...project} />
+            </Link>
           </React.Fragment>
         ))}
       </div>

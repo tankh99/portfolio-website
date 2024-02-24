@@ -3,9 +3,16 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
+import orthogaitImg from "@/public/orthogait.png";
 import rmtdevImg from "@/public/rmtdev.png";
+import eyeWantToRestImg from "@/public/eye-want-to-rest.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-import { Experience } from "./types";
+import golunchImg from '@/public/golunch.png';
+import tremorguardImg from '@/public/tremorguard.png';
+import timezonifyImg from '@/public/timezonify.png';
+import wallGameImg from '@/public/wall-game.png';
+
+import { Experience, Project } from "./types";
 
 export const links = [
   {
@@ -83,27 +90,55 @@ export const experiencesData: Experience[] = [
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData: Project[] = [
   {
-    title: "CorpComment",
+    title: "E-Commerce Website",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I led the end-to-end development of an e-commerce site for an orthopaedics company with a focus on zero-cost maintenance and great user experience.",
+    tags: ["React", "Next.js", "Stripe", "Commerce.js", "EzParcel"],
+    imageUrl: orthogaitImg,
+    link: "https://orthogait.com.sg",
   },
   {
-    title: "rmtDev",
+    title: "Eye Want to Rest",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Initially a hackathon idea, I successfully developed and published this mobile application that aids individuals in maintaining optimal eye health.",
+    tags: ["React Native", "Expo"],
+    imageUrl: eyeWantToRestImg,
+    link: "https://apps.apple.com/ca/app/eye-want-to-rest/id1619681661",
   },
   {
-    title: "Word Analytics",
+    title: "GoLunch",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A web3-powered website that tracks distance travelled by users, which is stored as cryptocurrency to be exchanged for discounts at select restaurants.",
+    tags: ["React", "Express.js", "MySQL", "Solidity", "web3.js", "ReduxJS"],
+    imageUrl: golunchImg,
+    link: "https://github.com/tankh99/golunch",
+  },
+  {
+    title: "Wall Game",
+    description:
+      "A 3D web game built in 2 weeks to experiment with web-based 3D technologies.",
+    tags: ["React", "Typescript", "three.js"],
+    imageUrl: wallGameImg,
+    link: "https://tankh99.github.io/react-threejs-wall-game",
+  },
+  {
+    title: "TremorGuard",
+    description:
+      `A full-stack IoT solution to classify tremors in patients with Parkinson's disease, 
+      including categorising their daily activities using AI and automatically generating their daily activity diaries.`,
+    tags: ["Arduino", "PyTorch", "Azure IoTHub", "Next.js", "NestJS", "PostgreSQL"],
+    imageUrl: tremorguardImg,
+    link: "https://github.com/tankh99/tremorguard",
+  },
+  {
+    title: "Timezonify",
+    description:
+      "A web extension that converts timezones for you automatically, developed for both Chrome and Firefox users.",
+    tags: ["Javascript", "Web Extensions"],
+    imageUrl: timezonifyImg,
+    link: "https://github.com/tankh99/timezonify-extension",
   },
 ] as const;
 

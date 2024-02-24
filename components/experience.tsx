@@ -11,6 +11,7 @@ import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { Badge } from "./ui/badge";
+import Tag from "./tag";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -61,8 +62,9 @@ export default function Experience() {
               </p>
               <br/>
               <div className="font-semibold">Skills</div>
-              <div>{item.skills.map((skill) => {
+              <div className="flex flex-wrap mt-4 gap-2 sm:mt-auto">{item.skills.map((skill) => {
                 return (
+                  // <Tag tag={skill} key={index}/>
                   <Badge key={skill} className="!mt-2 !mr-2 !mb-2">{skill}</Badge>
                 )
               })}</div>

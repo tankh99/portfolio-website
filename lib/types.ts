@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { links } from "./data";
 
 export type SectionName = (typeof links)[number]["name"];
@@ -10,4 +11,12 @@ export type Experience = {
     icon: JSX.Element;
     date: string;
     skills: string[]
+}
+
+export type Project = {
+    title: string;
+    description: string;
+    imageUrl: StaticImageData;
+    link: string;
+    tags: string[];
 }
