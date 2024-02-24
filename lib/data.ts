@@ -11,6 +11,7 @@ import golunchImg from '@/public/golunch.png';
 import tremorguardImg from '@/public/tremorguard.png';
 import timezonifyImg from '@/public/timezonify.png';
 import wallGameImg from '@/public/wall-game.png';
+import lbtmImg from '@/public/lbtm.png';
 
 import { Experience, Project } from "./types";
 
@@ -106,6 +107,15 @@ export const projectsData: Project[] = [
     tags: ["React Native", "Expo"],
     imageUrl: eyeWantToRestImg,
     link: "https://apps.apple.com/ca/app/eye-want-to-rest/id1619681661",
+  },
+  {
+    title: "LooksBadToMe",
+    description:
+      `A web-based code-review game with a narrative of a young SWE intern navigating the toxicity of the workplace environment by leveraging OpenAI to generate realistic responses.
+      Submission for Hack&Roll 2024`,
+    tags: ["Next.js", "tRPC", "OpenAI"],
+    imageUrl: lbtmImg,
+    link: "https://looksbadtome.vercel.app/",
   },
   {
     title: "GoLunch",
