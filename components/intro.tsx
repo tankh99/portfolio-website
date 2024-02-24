@@ -9,6 +9,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import personalImg from "@/public/personal-photo.jpeg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -31,8 +32,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
+              src={personalImg}
+              alt="Khang Hou portrait"
               width="192"
               height="192"
               quality="95"
@@ -62,11 +63,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hello, I'm Khang Hou.</span> I'm a{" "}
+        <span className="font-bold">full-stack developer</span>{" "}
+        {/* with{" "} <span className="font-bold">8 years</span> of experience.  */}
+        who enjoys building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="underline">React (Next.js) and React Native (Expo)</span>.
       </motion.h1>
 
       <motion.div
