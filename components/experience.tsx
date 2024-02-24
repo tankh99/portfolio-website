@@ -61,11 +61,10 @@ export default function Experience() {
                 })}
               </p>
               <br/>
-              <div className="font-semibold">Skills</div>
+              <div className="font-semibold pb-4">Skills</div>
               <div className="flex flex-wrap mt-4 gap-2 sm:mt-auto">{item.skills.map((skill) => {
                 return (
-                  // <Tag tag={skill} key={index}/>
-                  <Badge key={skill} className="!mt-2 !mr-2 !mb-2">{skill}</Badge>
+                  <Tag tag={skill} key={index}/>
                 )
               })}</div>
             </VerticalTimelineElement>
