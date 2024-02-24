@@ -40,7 +40,7 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
-] as const;
+];
 
 export const experiencesData: Experience[] = [
   {
@@ -89,7 +89,7 @@ export const experiencesData: Experience[] = [
     date: "Oct 2019 - Feb 2020",
     skills: ["Spring Boot", "Vue.js"]
   },
-] as const;
+];
 
 export const projectsData: Project[] = [
   {
@@ -150,7 +150,7 @@ export const projectsData: Project[] = [
     imageUrl: timezonifyImg,
     link: "https://github.com/tankh99/timezonify-extension",
   },
-] as const;
+];
 
 export const skillsData = [
   "React",
@@ -174,4 +174,4 @@ export const skillsData = [
   "TypeScript",
   "Git",
   "Framer Motion",
-] as const;
+];
