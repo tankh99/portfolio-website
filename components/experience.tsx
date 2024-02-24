@@ -10,6 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { Badge } from "./ui/badge";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -44,11 +45,27 @@ export default function Experience() {
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <h3 className="!text-lg font-semibold capitalize">{item.title}</h3>
+              <p className="font-extralight !text-sm text-gray-400 !mt-0 pb-2">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
+                {item.description.map((desc, index) => {
+                  return (
+                    // Indent each item in description
+                    <div key={index} className="flex items-start gap-x-2">
+                      <p>-</p>
+                      <p className="">{desc}
+                      </p>
+                    </div>
+                  )
+                })}
               </p>
+              <br/>
+              <div className="font-semibold">Skills</div>
+              <div>{item.skills.map((skill) => {
+                return (
+                  <Badge key={skill} className="!mt-2 !mr-2 !mb-2">{skill}</Badge>
+                )
+              })}</div>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
