@@ -22,7 +22,7 @@ export default function Experience() {
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
+          <React.Fragment key={`${item.title}.${index}`}>
             <VerticalTimelineElement
               contentStyle={{
                 background:
@@ -48,23 +48,23 @@ export default function Experience() {
             >
               <h3 className="!text-lg font-semibold capitalize">{item.title}</h3>
               <p className="font-extralight !text-sm text-gray-400 !mt-0 pb-2">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <div className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description.map((desc, index) => {
                   return (
                     // Indent each item in description
-                    <div key={index} className="flex items-start gap-x-2">
+                    <div key={desc} className="flex items-start gap-x-2">
                       <p>-</p>
                       <p className="">{desc}
                       </p>
                     </div>
                   )
                 })}
-              </p>
+              </div>
               <br/>
               <div className="font-semibold pb-4">Skills</div>
               <div className="flex flex-wrap mt-4 gap-2 sm:mt-auto">{item.skills.map((skill) => {
                 return (
-                  <Tag tag={skill} key={index}/>
+                  <Tag tag={skill} key={skill}/>
                 )
               })}</div>
             </VerticalTimelineElement>
