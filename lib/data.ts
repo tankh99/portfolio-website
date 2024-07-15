@@ -12,6 +12,8 @@ import tremorguardImg from '@/public/tremorguard.png';
 import timezonifyImg from '@/public/timezonify.png';
 import wallGameImg from '@/public/wall-game.png';
 import lbtmImg from '@/public/lbtm.png';
+import kampungconnectImg from '@/public/kampungconnect.png';
+import babeljamImg from '@/public/babeljam.jpeg'
 
 import { Experience, Project } from "./types";
 
@@ -44,11 +46,23 @@ export const links = [
 
 export const experiencesData: Experience[] = [
   {
+    title: "Software Engineer",
+    location: "SGTraDex, Singapore",
+    description: [
+      `Implemented the user interface for a RAG-based chatbot with real-time text streaming, while enhancing reliability through custom evaluation metrics leveraging LLamaIndex and vector database technology`,
+      `Identified solutions capable of returning deterministically-generated wallet addresses across different API keys for TradeTrust, an open-source blockchain verification service for logistics, by evaluating Web3 authentication services, including Magic.`,
+      
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Dec 2023 - Jan 2024",
+    skills: ["React", "LlamaIndex", "web3"],
+  },
+  {
     title: "Freelance Software Developer",
     location: "ShareLah SG, Singapore",
     description: [
-      `Took on a job of revitalising a legacy codebase with around 90,000 LoC and 1,500 pre-existing users`,
-      `Within 1 month, I developed a completely new mobile application and server with a modern stack, deploying it on AWS and ensuring optimal user experience.`,
+      `Prevented ShareLah termination on App and Play stores by upgrading a 90k LoC legacy codebase to support minimum required versions, additionally achieving a 433\% boost in user conversion, by integrating single sign-on authentication and Apple/Google Pay within a month`,
+      `Maintained a 99.9\% server uptime by managing application deployment and maintenance with AWS EC2 and S3.`,
       
     ],
     icon: React.createElement(CgWorkAlt),
@@ -60,7 +74,7 @@ export const experiencesData: Experience[] = [
     location: "Computing for Voluntary Welfare Organisations, Singapore",
     description: [
       `Migrated a monolithic backend service with over 150,000 lines of code from Ruby on Rails to Golang, achieving a 5x performance boost and substantial enhancement in system maintainability`,
-      `Conceptualised and developed a dynamic form schema in PostgreSQL, removing the need for 17 different hard-coded forms in the codebase`
+      `Eliminated the need for 17 different hard-coded forms in the codebase by conceptualising and developing a dynamic and extensible form schema`
     ],
     icon: React.createElement(CgWorkAlt),
     date: "May 2023 - Aug 2023",
@@ -70,8 +84,8 @@ export const experiencesData: Experience[] = [
     title: "full-Stack Developer",
     location: "Transliner, Singapore",
     description: [
-      `Migrated a legacy enterprise resource planning (ERP) system from ASP.NET WebForms to ASP.NET Core, improving application performance by 600\%`,
-      `Modernised an old Wix website using Angular to deliver a mobile-friendly and interactive web experience`,
+      `Migrated a legacy enterprise resource planning (ERP) system from ASP.NET WebForms to ASP.NET Core, improving server performance by 600\%`,
+      `Enabled clients to track shipments in real-time by transforming a pre-existing Wix site into a responsive client-facing website in Angular`,
       // `Championed development of a mobile version of the company's ERP system with React Native`,
     ],
     icon: React.createElement(CgWorkAlt),
@@ -82,7 +96,7 @@ export const experiencesData: Experience[] = [
     title: "Backend Developer Intern",
     location: "Centre for Strategic Infocomm Technologies, Singapore",
     description: [
-      "Designed systems for a drag-and-drop e-form builder with Spring Boot and MongoDB, empowering companies to easily design highly-customisable surveys.",
+      "Facilitated customisable survey creation by structuring the backend to read and write dynamic data for a drag-and-drop e-form builder in Spring Boot and MongoDB",
       `Developed a contextual feedback module to enhance internal data collection and analytics capabilities`
     ],
     icon: React.createElement(CgWorkAlt),
@@ -92,6 +106,24 @@ export const experiencesData: Experience[] = [
 ];
 
 export const projectsData: Project[] = [
+  {
+    title: "KampungConnect",
+    description:
+      "Developed a robust volunteer management system for Groundup Initiative, featuring a customised authentication system for secure access, automated onboarding messages via Telegram, and comprehensive admin control over events and volunteer management. The system supports recurring events similar to Google Calendar, allowing volunteers to easily sign up for repeated engagements, enhancing both efficiency and user experience.",
+
+    tags: ["Next.js", "NestJS", "Prisma", "PostgreSQL", "fly.io"],
+    imageUrl: kampungconnectImg,
+    link: "https://kampungconnect-staging.vercel.app/",
+  },
+  {
+    title: "BabelJam",
+    description:
+      "Developed a multilingual video translation system for a hackathon, promoting accessibility across languages while retaining the original voice using a voice synthesizer. Key features include audio transcription, translation between languages, and voice cloning via ElevenLabs to match the original video's voice. The system also provides a web interface for manual adjustments to the transcription or translation.",
+
+    tags: ["Next.js", "ElevenLabs", "OpenAI Whisper", "Google Translate", "wav2lipy"],
+    imageUrl: babeljamImg,
+    link: "https://devpost.com/software/babbel-jam",
+  },
   {
     title: "E-Commerce Website",
     description:
@@ -111,7 +143,7 @@ export const projectsData: Project[] = [
   {
     title: "LooksBadToMe",
     description:
-      `A web-based code-review game with a narrative of a young SWE intern navigating the toxicity of the workplace environment by leveraging OpenAI to generate realistic responses.
+      `A web-based code-review game with a narrative of a young software engineering intern navigating the toxicity of the workplace environment by leveraging OpenAI to generate realistic responses.
       Submission for Hack&Roll 2024`,
     tags: ["Next.js", "tRPC", "OpenAI"],
     imageUrl: lbtmImg,
