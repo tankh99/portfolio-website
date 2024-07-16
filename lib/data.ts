@@ -13,7 +13,7 @@ import timezonifyImg from '@/public/timezonify.png';
 import wallGameImg from '@/public/wall-game.png';
 import lbtmImg from '@/public/lbtm.png';
 import kampungconnectImg from '@/public/kampungconnect.png';
-import babeljamImg from '@/public/babeljam.jpeg'
+import babeljamImg from '@/public/babeljam.png'
 
 import { Experience, Project } from "./types";
 
