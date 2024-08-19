@@ -43,7 +43,7 @@ const ScrollableContainer = ({ children }: P) => {
             <div
                 ref={containerRef}
                 className={cn(
-                    `leading-relaxed text-gray-700 dark:text-white/70 overflow-y-auto h-32 overflow-y-auto scrollbar rounded-md`,
+                    `leading-relaxed text-gray-700 dark:text-white/70 overflow-y-auto h-28 overflow-y-auto scrollbar rounded-md`,
                 )}
             >
                 {children}
