@@ -14,6 +14,7 @@ import wallGameImg from '@/public/wall-game.png';
 import lbtmImg from '@/public/lbtm.png';
 import kampungconnectImg from '@/public/kampungconnect.png';
 import babeljamImg from '@/public/babeljam.png'
+import learnieGif from '@/public/learnie.gif'
 
 import { Experience, Project } from "./types";
 
@@ -46,7 +47,7 @@ export const links = [
 
 export const experiencesData: Experience[] = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer Intern",
     location: "SGTraDex, Singapore",
     description: [
       `Implemented the user interface for a RAG-based chatbot with real-time text streaming, while enhancing reliability through custom evaluation metrics leveraging LLamaIndex and vector database technology`,
@@ -107,6 +108,15 @@ export const experiencesData: Experience[] = [
 
 export const projectsData: Project[] = [
   {
+    title: "Learnie",
+    description:
+      "Addressed the need for effective study tools by building an Obsidian plugin that enhances learning using scientifically-proven study techniques like interspersed and interleaved learning, resulting in hundreds of downloads on the Obsidian plugin store.",
+
+    tags: ["Node.js", "Obsidian"],
+    imageUrl: learnieGif,
+    link: "https://github.com/tankh99/learnie-plugin",
+  },
+  {
     title: "KampungConnect",
     description:
       "Developed a robust volunteer management system for Groundup Initiative, featuring a customised authentication system for secure access, automated onboarding messages via Telegram, and comprehensive admin control over events and volunteer management. The system supports recurring events similar to Google Calendar, allowing volunteers to easily sign up for repeated engagements, enhancing both efficiency and user experience.",
@@ -125,9 +135,9 @@ export const projectsData: Project[] = [
     link: "https://devpost.com/software/babbel-jam",
   },
   {
-    title: "E-Commerce Website",
+    title: "E-Commerce Site for Orthopaedic shoes",
     description:
-      "I led the end-to-end development of an e-commerce site for an orthopaedics company with a focus on zero-cost maintenance and great user experience.",
+      "Led the end-to-end development of an e-commerce site for an orthopaedics company with a focus on zero-cost maintenance and great user experience.",
     tags: ["React", "Next.js", "Stripe", "Commerce.js", "EzParcel"],
     imageUrl: orthogaitImg,
     link: "https://orthogait.com.sg",
